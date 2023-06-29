@@ -24,12 +24,12 @@
         </div>
     </div>
 </div>
-<div class="layui-upload-drag shadow layui_hide" id="uploadImage" th:if="${session.user==null}">
+<div class="layui-upload-drag shadow" id="uploadImage">
     <i class="layui-icon"></i>
     <p>点击上传，或将文件拖拽到此处</p>
 </div>
 
-<div id="categoryId" th:text="${categoryId}"  style="display:none;"></div>
+<div id="categoryId" th:text="${categoryId}" ></div>
 
 <div th:include="common :: commonFooter"></div>
 

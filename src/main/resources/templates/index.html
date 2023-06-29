@@ -17,14 +17,14 @@
 <div th:replace="common :: commonHeader"></div>
 
 <div class="big_img_box">
-  <img src="../static/imgs/big_img.jpg" alt="" class="big_img">
+  <img src="../static/imgs/big_img.jpg" th:src="@{/imgs/big_img.jpg}" alt="" class="big_img">
   <div></div>
 </div>
 <div class="main">
   <div class="main_body">
     <div class="sidebar">
       <div class="information_div shadow">
-        <div class="icon_div"><img src="../static/imgs/icon.jpg" alt=""></div>
+        <div class="icon_div"><img src="../static/imgs/icon.jpg" th:src="@{/imgs/icon.jpg}" alt=""></div>
         <div class="writer"><p>Blog</p></div>
         <div class="motto">
           <p>phrase,phrase,phrase,phrase,phrase,phrase,phrase,phrase,phrase,</p>
@@ -67,7 +67,7 @@
         <li class="blog_list_li shadow">
           <div class="blog_content_div">
             <div class="blog_img_div">
-              <a href="#"><img src="../static/imgs/img.png" alt="" class="blog_img"></a>
+              <a href="#"><img src="../static/imgs/img.png" th:src="@{/imgs/img.jpg}" alt="" class="blog_img"></a>
             </div>
             <div class="blog_content">
               <div class="content_container">
@@ -87,7 +87,7 @@
         <li class="blog_list_li shadow">
           <div class="blog_content_div">
             <div class="blog_img_div">
-              <a href="#"><img src="../static/imgs/img.png" alt="" class="blog_img"></a>
+              <a href="#"><img src="../static/imgs/img.png" th:src="@{/imgs/img.jpg}" alt="" class="blog_img"></a>
             </div>
             <div class="blog_content">
               <div class="content_container">
@@ -107,7 +107,7 @@
         <li class="blog_list_li shadow">
           <div class="blog_content_div">
             <div class="blog_img_div">
-              <a href="#"><img src="../static/imgs/img.png" alt="" class="blog_img"></a>
+              <a href="#"><img src="../static/imgs/img.png" th:src="@{/imgs/img.jpg}" alt="" class="blog_img"></a>
             </div>
             <div class="blog_content">
               <div class="content_container">
@@ -127,7 +127,7 @@
         <li class="blog_list_li shadow">
           <div class="blog_content_div">
             <div class="blog_img_div">
-              <a href="#"><img src="../static/imgs/img.png" alt="" class="blog_img"></a>
+              <a href="#"><img src="../static/imgs/img.png" th:src="@{/imgs/img.jpg}" alt="" class="blog_img"></a>
             </div>
             <div class="blog_content">
               <div class="content_container">
@@ -147,7 +147,7 @@
         <li class="blog_list_li shadow">
           <div class="blog_content_div">
             <div class="blog_img_div">
-              <a href="#"><img src="../static/imgs/img.png" alt="" class="blog_img"></a>
+              <a href="#"><img src="../static/imgs/img.png" th:src="@{/imgs/img.jpg}" alt="" class="blog_img"></a>
             </div>
             <div class="blog_content">
               <div class="content_container">
