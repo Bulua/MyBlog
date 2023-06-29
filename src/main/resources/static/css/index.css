@@ -1,0 +1,237 @@
+
+.main{
+    width: 100%;
+    background: linear-gradient(to right,
+    rgb(250, 238, 226), rgb(243,240,247),
+    rgb(246, 250, 226), rgb(231, 246, 252),
+    rgb(216, 243, 245), rgb(217, 246, 231));
+}
+.main_body{
+    width: 70%;
+    overflow: hidden;
+    clear: both;
+    margin: 950px auto 0;
+}
+.sidebar{
+    width: 25%;
+    float: left;
+}
+.blog_list{
+    width: 65%;
+    float: left;
+}
+.sidebar, .blog_list{
+    margin: 20px 10px 5px 20px;
+}
+.blog_list_li{
+    width: 100%;
+    height: 260px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+.blog_content_div{
+    width: 100%;
+    height: 100%;
+}
+.blog_img_div{
+    width: 40%;
+    height: 300px;
+    overflow: hidden;
+    float: left;
+    border-radius: 10px 0 0 10px;
+}
+.blog_content{
+    width: 60%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.29);
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blog_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content_container{
+    width: 85%;
+    height: 70%;
+}
+.blog_time_div{
+    width: 100%;
+    height: 30px;
+    margin: 5px auto;
+}
+.blog_abstract{
+    width: 100%;
+    height: 130px;
+    font-size: 18px;
+    line-height: 32px;
+    overflow: hidden;
+}
+.blog_abstract p{
+    text-overflow: ellipsis;
+}
+.go_top{
+    width: 50px;
+    height: 50px;
+    background-color: #4bb1f2;
+    position: fixed;
+    right: 0;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.go_top:hover{
+    background-color: #d9a771;
+}
+.information_div{
+    width: 90%;
+    height: 400px;
+    background-color: rgba(241, 232, 232, 0.35);
+    margin: auto;
+}
+.icon_div{
+    margin: 15px auto 5px;
+    background-color: white;
+    overflow: hidden;
+}
+.icon_div, img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.writer{
+    font-size: 25px;
+    margin: auto;
+    text-align: center;
+}
+.motto{
+    width: 70%;
+    margin: 10px auto 0;
+    /*background-color: #00f7de;*/
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.articles_num_tags{
+    width: 70%;
+    height: 80px;
+    margin: 20px auto 0;
+    /*background-color: #4bdc5e;*/
+}
+.articles_num_div{
+    float: left;
+}
+.tags_num_div{
+    float: right;
+}
+.articles_num_div, .tags_num_div{
+    width: 40%;
+    height: 100%;
+    /*background-color: #4277bd;*/
+    margin: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.articles_tags_name{
+    margin-bottom: 15px;
+}
+.call_me{
+    height: 35px;
+    width: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    /*background-color: #00f7de;*/
+}
+.call_me li{
+    margin: 0 4px;
+    float: left;
+}
+.big_img_box{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -999;
+    overflow: hidden;
+}
+.big_img{
+    width: 100%;
+    height: 100%;
+}
+.announcement_div{
+    width: 90%;
+    margin: 20px auto 0;
+    background-color: #ebefeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.notice{
+    width: 80%;
+    margin: 20px auto 10px;
+    /*background-color: #5f5f5f;*/
+}
+.notice_content{
+    width: 80%;
+    font-size: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.tags_div{
+    width: 90%;
+    margin: 20px auto 0;
+    background-color: #eeeaea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.tags, .tags_ul{
+    width: 80%;
+}
+.tags_ul{
+    /*background-color: #5f5f5f;*/
+    margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.tags_div li {
+    line-height: 24px;
+    float: left;
+    font-size: 23px;
+    margin: 4px 10px 4px 0;
+    /*background-color: #ce2e2e;*/
+}
+.pages{
+    height: 40px;
+    text-align: center;
+}
+.pages_ul{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.page_num {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(0, 196, 182, 0.66);
+}

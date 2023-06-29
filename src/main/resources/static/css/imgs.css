@@ -1,0 +1,52 @@
+.img_box{
+    width: 100%;
+    background-color: rgba(217, 227, 232, 0.22);
+    border-radius: 15px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* 设置弹性盒子内元素自动换行 */
+    overflow: hidden;
+    text-align: justify; /* 最后一行两端对齐 */
+}
+.img_box::after{
+    content: "";
+    flex: 1 1 100%;
+}
+.layui-main{
+    margin: 150px auto 40px;
+}
+.panel{
+    background-color: white;
+    padding-bottom: 20px;
+    min-height: 800px;
+}
+.s_box{
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+}
+.s_box:hover{
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 10px #bdbaba;
+}
+.s_box img{
+    width: 100%; /* 设置实际宽度为父元素宽度的100% */
+    height: 100%;
+    object-fit: cover;
+}
+.layui-upload-drag{
+    position: fixed;
+    top: 200px;
+    right: 0;
+    border-radius: 10px;
+}
+.layui-upload-drag:hover {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), default;
+}

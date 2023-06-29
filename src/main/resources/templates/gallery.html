@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="姬鹏辉的博客网站">
+    <meta name="description" content="个人搭建的博客，记录学习历程">
+
+    <title>Lover</title>
+
+    <div th:include="common :: commonCSS"></div>
+    <link rel="stylesheet" th:href="@{/css/gallery.css}" href="../static/css/gallery.css">
+</head>
+<body>
+
+<div th:replace="common :: commonHeader"></div>
+
+<div class="layui-main panel shadow">
+    <div class="big_box">
+        <div class="imghub"><h1><strong>图库</strong></h1></div>
+        <div class="middle_box">
+            <a th:each="coverImg, i : ${coverImages}" th:href="'/images/' + ${i['index']}" >
+                <div class="small_box shadow">
+                    <img th:src="${coverImg.url}" class="cover_img cursor-hover" alt="">
+                    <div class="imghub_type cursor-hover" th:text="${coverImg.imageName}">旅行</div>
+                    <div class="bottom_line cursor-hover"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div th:include="common :: commonFooter"></div>
+
+<div th:include="common :: commonJS"></div>
+</body>
+</html>

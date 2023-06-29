@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <div th:include="common :: commonCSS"></div>
+    <link rel="stylesheet" th:href="@{/css/editormd.min.css}" href="../static/css/editormd.min.css">
+
+    <style>
+        #md-content{
+            margin: 100px auto 100px;
+            z-index: 999999;
+        }
+        .box-panel{
+            width: 8%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 130px;
+            right: 5px;
+        }
+        .btn-content-upload{
+            width: 140px;
+            height: 50px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div th:replace="common :: commonHeader"></div>
+
+<div id="md-content">
+    <textarea name="content"></textarea>
+</div>
+<div class="box-panel">
+    <div class="box-btn">
+        <button class="layui-btn btn-content-upload">上传文章</button>
+    </div>
+</div>
+
+
+<div th:include="common :: commonFooter"></div>
+<div th:include="common :: commonJS"></div>
+<script th:src="@{/js/editormd.min.js}" src="../static/js/editormd.min.js"></script>
+<script th:src="@{/js/editor.js}" src="../static/js/editor.js"></script>
+</body>
+</html>

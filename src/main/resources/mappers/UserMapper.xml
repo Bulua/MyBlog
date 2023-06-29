@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jph.myblog.mapper.UserMapper">
+
+    <sql id="SelectUserParamSQL">
+        id, username, password, role_id
+    </sql>
+    <select id="getUserByNameAndPwd" resultType="User">
+        SELECT
+            <include refid="SelectUserParamSQL"/>
+        FROM
+            user
+        <where>
+            <if test="id!=null">
+                and id = #{id}
+            </if>
+            <if test="username!=null">
+                and username = #{username}
+            </if>
+            <if test="password!=null">
+                and password = #{password}
+            </if>
+            <if test="roleId!=null">
+                and role_id = #{roleId}
+            </if>
+        </where>
+    </select>
+</mapper>

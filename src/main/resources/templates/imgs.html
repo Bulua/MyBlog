@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>照片</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="姬鹏辉的博客网站">
+    <meta name="description" content="个人搭建的博客，记录学习历程">
+
+    <div th:include="common :: commonCSS"></div>
+
+    <link rel="stylesheet" th:href="@{/css/gallery.css}" href="../static/css/gallery.css">
+    <link rel="stylesheet" th:href="@{/css/imgs.css}" href="../static/css/imgs.css">
+</head>
+<body>
+
+<div th:replace="common :: commonHeader"></div>
+
+<div class="layui-main shadow panel">
+    <div class="big_box">
+        <div class="imghub"><h1><strong th:text="${category}"></strong></h1></div>
+        <div class="img_box" id="img_box">
+            <div class="s_box" th:each="img : ${images}"><img th:src="@{${img.url}}" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="layui-upload-drag shadow layui_hide" id="uploadImage" th:if="${session.user==null}">
+    <i class="layui-icon"></i>
+    <p>点击上传，或将文件拖拽到此处</p>
+</div>
+
+<div id="categoryId" th:text="${categoryId}"  style="display:none;"></div>
+
+<div th:include="common :: commonFooter"></div>
+
+<div th:include="common :: commonJS"></div>
+
+<script th:src="@{/js/imgs.js}" src="../static/js/imgs.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jph.myblog.mapper.ImageMapper">
+
+    <resultMap id="ImageCategoryMap" type="ImageCategory">
+        <id property="id" column="id"/>
+        <result property="categoryName" column="category_name"/>
+    </resultMap>
+    <resultMap id="ImageMap" type="com.jph.myblog.entity.Image">
+        <id property="id" column="id"/>
+        <result property="imageName" column="image_name"/>
+        <result property="url" column="url"/>
+        <result property="imageDate" column="image_date"/>
+        <collection property="category" ofType="ImageCategory"
+                    resultMap="ImageCategoryMap"/>
+    </resultMap>
+
+    <sql id="SelectImageParamSQL">
+        image.id, image_name, url, image_date,
+        image_category.id, image_category.category_name
+    </sql>
+    <select id="selectImagesByYearAndCategory" resultMap="ImageMap">
+        SELECT
+            <include refid="SelectImageParamSQL"/>
+        from
+            image, image_category
+        WHERE
+            <choose>
+                <when test="categoryId!=null">
+                    image.category_id = image_category.id
+                    AND
+                    image.category_id = #{categoryId}
+                </when>
+                <otherwise>
+                    1 = 1
+                </otherwise>
+            </choose>
+    </select>
+    <sql id="InsertImageParamSQL">
+        image_name, url, image_date, category_id
+    </sql>
+    <insert id="batchInsertImage" parameterType="List" useGeneratedKeys="true" keyProperty="id">
+        insert into image(<include refid="InsertImageParamSQL"></include>)
+        values
+        <foreach collection="images" item="img" separator=",">
+            (#{img.imageName}, #{img.url}, NOW(), #{img.category.id})
+        </foreach>
+    </insert>
+    <insert id="insertImage" parameterType="Image" useGeneratedKeys="true" keyProperty="id">
+        insert into
+            Image(<include refid="InsertImageParamSQL"/>)
+        values (#{imageName}, #{url}, NOW(), #{category.id})
+    </insert>
+</mapper>
